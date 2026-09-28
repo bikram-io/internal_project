@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './Layout';
 import MainDashboard from './pages/MainDashboard/MainDashboard';
+import DataPage from './pages/Data/DataPage';
 
 function App() {
   return (
@@ -12,7 +13,7 @@ function App() {
         <Route element={<Layout />}>
           <Route path="/dashboard" element={<MainDashboard />} />
           <Route path="/assessments" element={<div />} />
-          <Route path="/data" element={<div />} />
+          <Route path="/data" element={<DataPage />} />
           <Route path="/genai" element={<div />} />
           <Route path="/ml" element={<div />} />
           <Route path="/data-governance" element={<div />} />
