@@ -5,6 +5,7 @@ import MainDashboard from './pages/MainDashboard/MainDashboard';
 import DataPage from './pages/Data/DataPage';
 import KafkaOverview from './pages/Data/KafkaOverview';
 import AssessmentSetup from './pages/Data/AssessmentSetup';
+import BusinessReq from './pages/Data/BusinessReq';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Route path="/data" element={<DataPage />} />
           <Route path="/data/kafka" element={<KafkaOverview />} />
           <Route path="/data/kafka/assessment" element={<AssessmentSetup />} />
+          <Route path="/data/kafka/assessment/business-req" element={<BusinessReq />} />
           <Route path="/genai" element={<div />} />
           <Route path="/ml" element={<div />} />
           <Route path="/data-governance" element={<div />} />
