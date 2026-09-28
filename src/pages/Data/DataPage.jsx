@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Database, Activity, RefreshCw, Server, Cloud, Layers } from 'lucide-react';
 import './DataPage.css';
 
@@ -12,6 +13,8 @@ const DATA_MODULES = [
 ];
 
 export default function DataPage() {
+  const navigate = useNavigate();
+
   return (
     <div className="data-page">
       <header className="data-header">
@@ -29,7 +32,14 @@ export default function DataPage() {
               </div>
               <h3>{mod.name}</h3>
               <p>{mod.desc}</p>
-              <button className="mod-select-btn">Select Module</button>
+              <button 
+                className="mod-select-btn"
+                onClick={() => {
+                  if (mod.id === 'kafka') navigate('/data/kafka');
+                }}
+              >
+                Select Module
+              </button>
             </div>
           )
         })}

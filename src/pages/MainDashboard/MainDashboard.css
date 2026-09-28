@@ -99,8 +99,13 @@
 }
 
 @keyframes mask-up {
-  from { transform: translateY(110%); }
-  to { transform: translateY(0); }
+  from {
+    transform: translateY(110%);
+  }
+
+  to {
+    transform: translateY(0);
+  }
 }
 
 .dash-hero-sub {
@@ -111,8 +116,13 @@
 }
 
 @keyframes fade-in {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
 }
 
 /* ------------------------------------------------------------------ */
@@ -144,8 +154,15 @@
 }
 
 @keyframes row-rise {
-  from { opacity: 0; transform: translateY(26px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(26px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .domain-name {
@@ -296,8 +313,13 @@
 }
 
 @keyframes autoplay {
-  from { width: 0; }
-  to { width: 100%; }
+  from {
+    width: 0;
+  }
+
+  to {
+    width: 100%;
+  }
 }
 
 /* Stage */
@@ -335,8 +357,15 @@
 }
 
 @keyframes caption-in {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* ------------------------------------------------------------------ */
@@ -403,9 +432,17 @@
   transition: flex-grow 0.6s var(--ease);
 }
 
-.dist-seg.completed { background: var(--ok); }
-.dist-seg.in-progress { background: var(--warn); }
-.dist-seg.draft { background: rgba(255, 255, 255, 0.22); }
+.dist-seg.completed {
+  background: var(--ok);
+}
+
+.dist-seg.in-progress {
+  background: var(--warn);
+}
+
+.dist-seg.draft {
+  background: rgba(255, 255, 255, 0.22);
+}
 
 /* Tools */
 .log-tools {
@@ -524,8 +561,15 @@
 }
 
 @keyframes entry-in {
-  from { opacity: 0; transform: translateX(-16px); }
-  to { opacity: 1; transform: translateX(0); }
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .entry-new {
@@ -533,8 +577,15 @@
 }
 
 @keyframes entry-flash {
-  0% { opacity: 0; transform: translateY(-14px); }
-  25% { opacity: 1; transform: translateY(0); }
+  0% {
+    opacity: 0;
+    transform: translateY(-14px);
+  }
+
+  25% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 .rail-dot {
@@ -547,8 +598,13 @@
   box-shadow: 0 0 0 4px var(--bg);
 }
 
-.rail-dot.completed { background: var(--ok); }
-.rail-dot.in-progress { background: var(--warn); }
+.rail-dot.completed {
+  background: var(--ok);
+}
+
+.rail-dot.in-progress {
+  background: var(--warn);
+}
 
 .rail-dot.in-progress::after {
   content: '';
@@ -560,8 +616,15 @@
 }
 
 @keyframes ping {
-  from { opacity: 0.9; transform: scale(0.6); }
-  to { opacity: 0; transform: scale(1.9); }
+  from {
+    opacity: 0.9;
+    transform: scale(0.6);
+  }
+
+  to {
+    opacity: 0;
+    transform: scale(1.9);
+  }
 }
 
 .entry-card {
@@ -617,7 +680,7 @@
   color: var(--muted);
 }
 
-.entry-meta span + span::before {
+.entry-meta span+span::before {
   content: '';
   display: inline-block;
   width: 1px;
@@ -668,7 +731,9 @@
 }
 
 @keyframes spin {
-  to { transform: rotate(360deg); }
+  to {
+    transform: rotate(360deg);
+  }
 }
 
 .bar {
@@ -690,7 +755,9 @@
 }
 
 @keyframes shimmer {
-  to { background-position: -200% 0; }
+  to {
+    background-position: -200% 0;
+  }
 }
 
 .entry-date {
@@ -781,8 +848,15 @@
 }
 
 @keyframes menu-in {
-  from { opacity: 0; transform: scale(0.94) translateY(-4px); }
-  to { opacity: 1; transform: scale(1) translateY(0); }
+  from {
+    opacity: 0;
+    transform: scale(0.94) translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
 }
 
 .row-menu button {
@@ -830,6 +904,7 @@
   .entry-card {
     grid-template-columns: 40px minmax(160px, 1.4fr) minmax(140px, 1fr) auto;
   }
+
   .entry-date {
     display: none;
   }
@@ -839,6 +914,7 @@
   .showcase {
     grid-template-columns: 1fr;
   }
+
   .stage {
     min-height: 340px;
   }
@@ -849,24 +925,29 @@
     grid-template-columns: minmax(0, 1fr) auto;
     gap: 10px 12px;
   }
+
   .entry-icon {
     display: none;
   }
+
   .entry-status {
     grid-column: 1 / -1;
     flex-direction: row;
     align-items: center;
     gap: 12px;
   }
+
   .search {
     flex: 1 1 100%;
   }
+
   .log-foot {
     margin-left: 0;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
+
   .dash *,
   .row-menu {
     animation: none !important;
