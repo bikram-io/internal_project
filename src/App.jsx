@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Layout from './Layout';
-import Dashboard from './Dashboard';
+import MainDashboard from './pages/MainDashboard/MainDashboard';
 
 function App() {
   return (
@@ -10,7 +10,7 @@ function App() {
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
         
         <Route element={<Layout />}>
-          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/dashboard" element={<MainDashboard />} />
           <Route path="/assessments" element={<div />} />
           <Route path="/data" element={<div />} />
           <Route path="/genai" element={<div />} />
